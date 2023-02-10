@@ -155,7 +155,7 @@ public class Main extends Application {
         Button muteButton = new Button();
         muteButton.setText("Mute audio");
         muteButton.setFocusTraversable(false);
-        ui.add(muteButton, 0, 22);
+        ui.add(muteButton, 0, 23);
         muteButton.setOnAction(actionEvent -> {
             if (muteButton.getText().equals("Mute audio")) {
                 gameplayMusic.stop();
@@ -167,10 +167,19 @@ public class Main extends Application {
             }
         });
 
+        Button restartButton = new Button();
+        restartButton.setText("Restart game");
+        restartButton.setFocusTraversable(false);
+        ui.add(restartButton, 0, 21);
+//        restartButton.setOnAction(actionEvent -> {
+//            map = MapLoader.loadMap();
+//            refresh(deltaX, deltaY);
+//        });
+
         Button loadButton = new Button();
         loadButton.setText("Load Saved Game");
         loadButton.setFocusTraversable(false);
-        ui.add(loadButton, 0, 21);
+        ui.add(loadButton, 0, 22);
         loadButton.setOnAction(actionEvent -> {
             List<String> savedGamesList = new ArrayList<>();
             savedGamesList.add("Save1");
@@ -214,8 +223,9 @@ public class Main extends Application {
         DataLoader dataLoader = new DataLoader(dbManager, map1);
         List<Actor> actors = dataLoader.getAllActors(userName);
         List<Item> items = dataLoader.getAllItems(userName);
-        GameMap savedMap = populateBlankMap(map1, actors, items);
-        return savedMap;
+//        GameMap savedMap = populateBlankMap(map1, actors, items);
+        return  map1;
+//        return savedMap;
     }
 
     public String getPlayerNameLabel() {

@@ -33,14 +33,16 @@ public class ActorDaoJdbc implements ActorDao {
     }
 
     @Override
-    public void update(ActorModel actor, int gameStateId) {
+    public void update(ActorModel actor) {
         try (Connection conn = dataSource.getConnection()) {
-            String sql = "UPDATE actor SET actor_name = ?, hp = ?, x = ?, y = ? WHERE game_state_id = ?";
+            String sql = "UPDATE actor SET actor_name = ?, hp = ?, x = ?, y = ?, dm = ? WHERE id = ?";
             PreparedStatement st = conn.prepareStatement(sql);
-            st.setInt(1, gameStateId);
+            st.setString(1, actor.getActorName());
             st.setInt(2, actor.getHp());
             st.setInt(3, actor.getX());
             st.setInt(4, actor.getY());
+            st.setInt(5, actor.getDm());
+            st.setInt(6, actor.getId());
             st.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

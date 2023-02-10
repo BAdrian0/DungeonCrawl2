@@ -39,9 +39,9 @@ public class GameDatabaseManager {
         actorDao.add(model, gameStateId);
     }
 
-    public void updateGameStateDetails(Actor actor, int gameStateId) {
+    public void updateGameStateDetails(Actor actor) {
         ActorModel model = new ActorModel(actor);
-        actorDao.update(model, gameStateId);
+        actorDao.update(model);
     }
 
     public void saveItems(Item item, int gameStateId) {

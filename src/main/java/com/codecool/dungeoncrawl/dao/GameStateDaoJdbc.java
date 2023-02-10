@@ -43,8 +43,11 @@ public class GameStateDaoJdbc implements GameStateDao {
 
     public Object getId(String name) {
         try (Connection conn = dataSource.getConnection()) {
-            String sql = "SELECT id FROM game_state WHERE save_name = " + "'"+name+"'";
+//            String sql = "SELECT id FROM game_state WHERE save_name = " + "'"+name+"'";
+            String sql = "SELECT id FROM game_state WHERE save_name = ?";
+
             PreparedStatement st = conn.prepareStatement(sql);
+            st.setString(1, name);
             ResultSet rs = st.executeQuery();
             if (!rs.next()) {
                 return null;
