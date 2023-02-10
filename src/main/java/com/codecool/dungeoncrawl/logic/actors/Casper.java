@@ -1,6 +1,7 @@
 package com.codecool.dungeoncrawl.logic.actors;
 
 import com.codecool.dungeoncrawl.logic.Cell;
+import com.codecool.dungeoncrawl.logic.CellType;
 import com.codecool.dungeoncrawl.logic.items.CasperCross;
 import com.codecool.dungeoncrawl.logic.items.Item;
 import com.codecool.dungeoncrawl.util.Direction;
@@ -20,7 +21,11 @@ public class Casper extends Actor {
     }
 
     private void setCross() {
-        this.cross = new CasperCross(getCell().getNeighbor(1, 0), this);
+        if(getCell().getNeighbor(1, 0).getType() != CellType.WALL) {
+            this.cross = new CasperCross(getCell().getNeighbor(1, 0), this);
+        } else{
+            this.cross = new CasperCross(getCell().getNeighbor(-1, 0), this);
+        }
     }
 
     @Override

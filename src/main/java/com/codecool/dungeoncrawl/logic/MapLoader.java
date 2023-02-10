@@ -140,10 +140,11 @@ public class MapLoader {
         }
 
         for (Item item: items) {
-            Cell cell = blankMap.getCell(item.getX(), item.getY());
-            cell.setType(CellType.FLOOR);
-            cell.setItem(item);
-  
+            if(item != null) {
+                Cell cell = blankMap.getCell(item.getX(), item.getY());
+                cell.setType(CellType.FLOOR);
+                cell.setItem(item);
+            }
         }
         return blankMap;
     }

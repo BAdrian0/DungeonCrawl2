@@ -35,6 +35,7 @@ public class DataLoader {
             switch (actorModel.getActorName()) {
                 case "player":
                     actor = new Player(cell);
+                    map.setPlayer((Player) actor);
                     break;
                 case "casper":
                     actor = new Casper(cell);
@@ -59,7 +60,7 @@ public class DataLoader {
         List<Item> items = new ArrayList<>();
         for(ItemModel itemModel: itemModels) {
             Cell cell = map.getCell(itemModel.getX(), itemModel.getY());
-            Item item;
+            Item item=null;
             switch (itemModel.getItemName()) {
                 case "sword":
                     item = new Sword(cell);
@@ -73,8 +74,10 @@ public class DataLoader {
                 case "openDoor":
                     item = new OpenDoor(cell);
                     break;
-                default:
+                case "key":
                     item = new Key(cell);
+                    break;
+                default:
                     break;
             }
             items.add(item);
