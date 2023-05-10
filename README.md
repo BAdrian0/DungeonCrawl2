@@ -16,11 +16,10 @@ So grab your torch and your backpack, and get ready to descend into the depths o
 ### Credits
 This project was developed as part of the Codecool programming course.
 
+<img width="1101" alt="Screenshot 2023-05-10 at 07 25 00" src="https://github.com/BAdrian0/DungeonCrawl2/assets/106266282/2a555f26-35cb-421d-920a-4743a97bd848">
 
+<img width="1097" alt="Screenshot 2023-05-10 at 07 25 18" src="https://github.com/BAdrian0/DungeonCrawl2/assets/106266282/73f08950-d073-48a0-8277-607c7b44a1e7">
 
-<img width="1101" alt="Screenshot 2023-05-10 at 07 25 00" src="https://github.com/BAdrian0/Dungeon-Crawl/assets/106266282/a5006bc2-fbbb-4371-933d-2a702381523f">
-
-<img width="1097" alt="Screenshot 2023-05-10 at 07 25 18" src="https://github.com/BAdrian0/Dungeon-Crawl/assets/106266282/9b70c3eb-a7c3-4d75-9489-2734ea6e0cbb">
 
 =======
 # Dungeon Crawl (sprint 2)
