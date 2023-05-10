@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dungeon-Crawl
 A pretty good Roguelike game.
 
@@ -21,3 +22,34 @@ This project was developed as part of the Codecool programming course.
 <img width="1101" alt="Screenshot 2023-05-10 at 07 25 00" src="https://github.com/BAdrian0/Dungeon-Crawl/assets/106266282/a5006bc2-fbbb-4371-933d-2a702381523f">
 
 <img width="1097" alt="Screenshot 2023-05-10 at 07 25 18" src="https://github.com/BAdrian0/Dungeon-Crawl/assets/106266282/9b70c3eb-a7c3-4d75-9489-2734ea6e0cbb">
+
+=======
+# Dungeon Crawl (sprint 2)
+
+## Story
+
+Last week you created a pretty good [Roguelike](https://en.wikipedia.org/wiki/Roguelike) game.
+It already has some features, but the players have no opportunity to save their games.
+It can be annoying, especially when you have to leave the game suddenly.
+
+The gamer community is begging you for saving functionality and some other new and interesting ideas, such as:
+
+- game sharing between players
+- maps of different sizes
+- player-tracking camera movement
+
+Management is handing out a **prioritized list** of new user stories that must be
+appended to the unfinished stories from last week in your product backlog.
+Try to estimate these new stories as well, and, based on the estimations,
+pick the stories your team can finish in this sprint.
+
+> Using database for saving game state feature is a business critical item which overrides every other priority now!
+
+Continue this entertaining project and make our players happier!
+
+## What are you going to learn?
+
+- Serialize objects.
+- Communicate with databases.
+- Write unit tests for your classes.
+- Understand the **Data Access Object** design pattern.
